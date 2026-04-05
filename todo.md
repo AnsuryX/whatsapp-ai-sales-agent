@@ -81,9 +81,9 @@
 - [ ] Create export analytics report functionality
 
 ### Frontend - Settings & Configuration
-- [ ] Build WhatsApp Business Account settings page
-- [ ] Create Meta App credentials management
-- [ ] Implement webhook URL configuration
+- [x] Build WhatsApp Business Account settings page
+- [x] Create Meta App credentials management
+- [x] Implement webhook URL configuration
 - [x] Build agent configuration interface
 - [ ] Create notification preferences panel
 
@@ -117,3 +117,35 @@
 - [ ] Set up database backups
 - [ ] Create monitoring and logging
 - [ ] Document deployment process
+
+
+## Response Template Library (NEW)
+
+### Backend
+- [ ] Update database schema with template enhancements (favorites, usage count)
+- [ ] Create template database helper functions
+- [ ] Build tRPC procedures for template CRUD operations
+- [ ] Implement template search and filtering logic
+- [ ] Add template usage tracking
+
+### Frontend - Template Management
+- [ ] Create Templates page with full management interface
+- [ ] Build template creation form with category selection
+- [ ] Implement template editor with preview
+- [ ] Add template deletion with confirmation
+- [ ] Create bulk template import/export functionality
+
+### Frontend - Template Quick-Insert
+- [ ] Add template quick-insert button to conversation interface
+- [ ] Build template search modal in conversation view
+- [ ] Implement template preview before insertion
+- [ ] Add template variable substitution (customer name, etc.)
+- [ ] Create template favorites/recent templates quick access
+
+### Features
+- [ ] Pre-built template library with common scenarios
+- [ ] Custom variable support in templates
+- [ ] Template categories and tags
+- [ ] Usage analytics (most used templates)
+- [ ] Template sharing between team members
+- [ ] Template versioning and history

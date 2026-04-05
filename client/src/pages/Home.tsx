@@ -1,7 +1,7 @@
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { MessageCircle, Settings, BarChart3, Zap } from "lucide-react";
+import { MessageCircle, Settings, BarChart3, Zap, Cog } from "lucide-react";
 import { getLoginUrl } from "@/const";
 import { Link } from "wouter";
 
@@ -130,7 +130,15 @@ export default function Home() {
 
       <div className="container py-12 px-4">
         <h2 className="text-3xl font-bold mb-8">Dashboard</h2>
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 gap-6">
+          <Link href="/settings">
+            <Card className="p-6 border-black cursor-pointer hover:bg-gray-50 transition">
+              <Settings className="w-8 h-8 mb-4 text-red-600" />
+              <h3 className="text-xl font-bold">Settings</h3>
+              <p className="text-gray-600 text-sm mt-2">Configure WhatsApp credentials and webhook</p>
+            </Card>
+          </Link>
+
           <Link href="/conversations">
             <Card className="p-6 border-black cursor-pointer hover:bg-gray-50 transition">
               <MessageCircle className="w-8 h-8 mb-4 text-red-600" />

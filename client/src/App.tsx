@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Conversations from "./pages/Conversations";
 import AgentConfig from "./pages/AgentConfig";
 import Analytics from "./pages/Analytics";
+import Settings from "./pages/Settings";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -17,6 +18,7 @@ function Router() {
       <Route path={"/conversations"} component={Conversations} />
       <Route path={"/agent-config"} component={AgentConfig} />
       <Route path={"/analytics"} component={Analytics} />
+      <Route path={"/settings"} component={Settings} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
