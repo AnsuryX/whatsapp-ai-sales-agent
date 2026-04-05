@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Settings as SettingsIcon, Save, AlertCircle, CheckCircle } from "lucide-react";
 import { Link } from "wouter";
 import { toast } from "sonner";
+import { WebhookStatusIndicator, WebhookStatusBadge } from "@/components/WebhookStatusIndicator";
 
 export default function Settings() {
   const { user } = useAuth();
@@ -137,7 +138,13 @@ export default function Settings() {
           </Card>
         )}
 
-        {/* WhatsApp Configuration Form */}
+        {/* Webhook Status Section */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">Connection Status</h2>
+          <WebhookStatusIndicator autoRefresh={true} refreshInterval={30000} />
+        </div>
+
+      {/* WhatsApp Configuration Form */}
         <Card className="p-8 border-black mb-8">
           <h2 className="text-2xl font-bold mb-6">WhatsApp Business Configuration</h2>
 

@@ -2,6 +2,7 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { MessageCircle, Settings, BarChart3, Zap, Cog } from "lucide-react";
+import { WebhookStatusBadge } from "@/components/WebhookStatusIndicator";
 import { getLoginUrl } from "@/const";
 import { Link } from "wouter";
 
@@ -121,9 +122,12 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 bg-red-600"></div>
-              <h1 className="text-2xl font-bold tracking-tight">WhatsApp AI Sales Agent</h1>
+              <h1 className="text-3xl font-bold tracking-tight">WhatsApp AI Sales Agent</h1>
             </div>
-            <div className="text-sm text-gray-600">Welcome, {user?.name}</div>
+            <div className="flex items-center gap-4">
+              <WebhookStatusBadge />
+              <div className="text-sm text-gray-600">Welcome, {user?.name}</div>
+            </div>
           </div>
         </div>
       </header>

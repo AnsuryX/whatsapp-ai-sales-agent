@@ -85,6 +85,7 @@
 - [x] Create Meta App credentials management
 - [x] Implement webhook URL configuration
 - [x] Build agent configuration interface
+- [x] Create real-time webhook status indicator
 - [ ] Create notification preferences panel
 
 ### Documentation & Setup

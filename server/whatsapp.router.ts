@@ -15,6 +15,7 @@ import {
   markNotificationAsRead,
 } from "./whatsapp.db";
 import { sendWhatsAppMessage } from "./whatsapp.webhook";
+import { checkWebhookStatus, validateWebhookConfig } from "./whatsapp.status";
 
 export const whatsappRouter = router({
   // WhatsApp Configuration
@@ -150,5 +151,26 @@ export const whatsappRouter = router({
     .mutation(async ({ ctx, input }) => {
       await markNotificationAsRead(input.notificationId);
       return { success: true };
+    }),
+
+  // Webhook Status
+  checkWebhookStatus: protectedProcedure.query(async ({ ctx }) => {
+    return await checkWebhookStatus(ctx.user.id);
+  }),
+
+  validateWebhookConfig: protectedProcedure
+    .input(
+      z.object({
+        businessPhoneNumberId: z.string().optional(),
+        accessToken: z.string().optional(),
+        webhookVerifyToken: z.string().optional(),
+      })
+    )
+    .query(({ input }) => {
+      return validateWebhookConfig(
+        input.businessPhoneNumberId,
+        input.accessToken,
+        input.webhookVerifyToken
+      );
     }),
 });
