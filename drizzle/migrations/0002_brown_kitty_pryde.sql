@@ -1,0 +1,1 @@
+ALTER TABLE `agent_config` MODIFY COLUMN `escalationKeywords` json;
