@@ -150,3 +150,42 @@
 - [ ] Usage analytics (most used templates)
 - [ ] Template sharing between team members
 - [ ] Template versioning and history
+
+
+## Vercel Deployment & Supabase Integration
+
+### Backend Setup
+- [x] Configure Supabase database connection
+- [x] Validate Supabase credentials and JWT tokens
+- [x] Create vercel.json configuration
+- [ ] Test database migrations on Supabase
+- [ ] Verify all API endpoints work with Supabase
+
+### Environment Configuration
+- [x] Set up environment variables for Supabase
+- [x] Create environment variable documentation
+- [ ] Configure environment variables in Vercel dashboard
+- [ ] Test environment variable loading in production
+
+### Deployment
+- [ ] Push code to GitHub repository
+- [ ] Connect GitHub repository to Vercel
+- [ ] Configure Vercel project settings
+- [ ] Add all environment variables to Vercel
+- [ ] Trigger first deployment
+- [ ] Verify deployment success
+
+### Post-Deployment
+- [ ] Test application on Vercel domain
+- [ ] Verify WhatsApp webhook connection
+- [ ] Test conversation flow end-to-end
+- [ ] Configure custom domain (optional)
+- [ ] Set up monitoring and error tracking
+- [ ] Enable database backups
+- [ ] Test backup and restore procedures
+
+### Documentation
+- [x] Create Vercel deployment guide
+- [x] Create Supabase setup guide
+- [ ] Create production troubleshooting guide
+- [ ] Document scaling procedures
